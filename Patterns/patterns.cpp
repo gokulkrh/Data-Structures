@@ -72,6 +72,39 @@ void leftInvertedStairNums(int n)
     };
 }
 
+void leftStairOnesZeros(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            if (i % 2 != 0)
+            {
+                if (j % 2 != 0)
+                {
+                    std::cout << 1 << " ";
+                }
+                else
+                {
+                    std::cout << 0 << " ";
+                }
+            }
+            else
+            {
+                if (j % 2 != 0)
+                {
+                    std::cout << 0 << " ";
+                }
+                else
+                {
+                    std::cout << 1 << " ";
+                }
+            }
+        }
+        std::cout << std::endl;
+    }
+}
+
 void mirrorStairNums(int n)
 {
     for (int i = 1; i <= n; i++)
@@ -102,13 +135,19 @@ void mirrorStairNums(int n)
     }
 }
 
-// void serialStairs(int n) {
-//     for(int i =1; i<=n; i++) {
-//         for (int j=(1+i); j<=(
-
-//         ))
-//     }
-// }
+void serialStairs(int n)
+{
+    int num = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            std::cout << num << " ";
+            num++;
+        }
+        std::cout << std::endl;
+    }
+}
 
 void leftStairsAlpha(int n)
 {
@@ -132,7 +171,9 @@ int main()
     // leftStairNumsPerRow(n);
     // leftInvertedStairStars(n);
     // leftInvertedStairNums(n);
+    // leftStairOnesZeros(n);
     // mirrorStairNums(n);
-    leftStairsAlpha(n);
+    // serialStairs(n);
+    // leftStairsAlpha(n);
     return 0;
 }
