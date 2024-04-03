@@ -1,61 +1,50 @@
 def starBlock(n):
     for i in range(n):
         for j in range(n):
-            print("*", end=" ")
+            print("*", end="")
         print("\n")
+    return
 
 def staircase(n):
-    for i in range(n):
-        for j in range(i+1):
-            print("*", end=" ")
+    for i in range(1, n+1):
+        for j in range(1, i+1):
+            print("*", end="")
         print("\n")
+    return
 
 def staircaseNums(n):
-    for i in range(n):
-        for j in range(i+1):
-            print(j+1, end=" ")
+    for i in range(1, n+1):
+        for j in range(1, i+1):
+            print(j, end="")
         print("\n")
+    return
 
 def staircaseNumsPerRow(n):
-    for i in range(n):
-        for j in range(i+1):
-            print(i+1, end=" ")
-        print("\n")
+    return
 
 def invertedStaircase(n):
-    for i in range(n):
-        for j in range(n-i):
-            print("*", end=" ")
-        print("\n")
+    return
 
 def invertedStarcaseNums(n):
-    for i in range(n):
-        for j in range(n-i):
-            print(j+1, end=" ")
-        print("\n")
+    return
 
 def oneZeroStaircase(n):
-    for i in range(n):
-        for j in range(i+1):
-            if i%2 == 0:
-                if j%2 == 0:
-                    print("1", end=" ")
-                else:
-                    print("0", end=" ")
-            else:
-                if j%2 == 0:
-                    print("0", end=" ")
-                else:
-                    print("1", end=" ")
-        print("\n")
+    return
                 
 
 if __name__ == "__main__":
-    n = int(input())
+    patterType, size = map(int, input().split())
+    
+    match patterType:
+        case 1:
+            starBlock(size)
+        case _:
+            print("invalid pattern type")
+    
     # starBlock(n)
     # staircase(n)
-    # staircaseNums(n)
+    # staircaseNums(size)
     # staircaseNumsPerRow(n)
     # invertedStaircase(n)
     # invertedStarcaseNums(n)
-    oneZeroStaircase(n)
+    # oneZeroStaircase(n)
