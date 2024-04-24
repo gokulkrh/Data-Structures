@@ -80,21 +80,13 @@ void starDiamond(int n) {}
 
 void starHalfDiamond(int n) {}
 
-void leftStairOnesZeros(int n)
-{
-}
+void leftStairOnesZeros(int n) {}
 
-void mirrorStairNums(int n)
-{
-}
+void mirrorStairNums(int n) {}
 
-void serialStairs(int n)
-{
-}
+void serialStairs(int n) {}
 
-void leftStairsAlpha(int n)
-{
-}
+void leftStairsAlpha(int n) {}
 
 void leftInvertedStairAlpha(int n) {}
 
